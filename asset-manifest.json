@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.96091b4e.css",
+    "main.js": "/static/js/main.971c9d38.js",
+    "static/media/destination-bg.jpg": "/static/media/destination-bg.b207978ce5625f17390f.jpg",
+    "static/media/Bitmap.jpg": "/static/media/Bitmap.e728c70032d3ec967357.jpg",
+    "static/media/viktor-glover.png": "/static/media/viktor-glover.184799b1b35e8f826302.png",
+    "static/media/anousheh-ansari.png": "/static/media/anousheh-ansari.a621b868b4d984fa6a8e.png",
+    "static/media/spaceport-desc.jpg": "/static/media/spaceport-desc.083c61fd48dca54dc42e.jpg",
+    "static/media/Spaceport.jpg": "/static/media/Spaceport.ea14c0123c8f51c6eb28.jpg",
+    "static/media/douglas-hurley.png": "/static/media/douglas-hurley.9c17b30ccff19a61db0f.png",
+    "static/media/mark-shuttleworth.png": "/static/media/mark-shuttleworth.ff4f33dd37e72b90b00e.png",
+    "static/media/crew-bg.jpg": "/static/media/crew-bg.39d1a715d953c8e01181.jpg",
+    "static/media/technology-bg.jpg": "/static/media/technology-bg.4cebe70110338e9cccc0.jpg",
+    "static/media/europa.png": "/static/media/europa.7b27784afe432eb131ea.png",
+    "static/media/launch-desc.jpg": "/static/media/launch-desc.a0d922aba09903892955.jpg",
+    "static/media/moon.png": "/static/media/moon.aa8a275d960d273c2b58.png",
+    "static/media/mars.png": "/static/media/mars.c057b111a0151ea2f0e0.png",
+    "static/media/launch.jpg": "/static/media/launch.ff522a87b8e3ec047258.jpg",
+    "static/media/capsule-desk.jpg": "/static/media/capsule-desk.53d83887d82085742f3f.jpg",
+    "static/media/capsule.jpg": "/static/media/capsule.d5e90de270409d4d20d0.jpg",
+    "static/media/titan.png": "/static/media/titan.8ac1236fe039cb5d5386.png",
+    "index.html": "/index.html",
+    "main.96091b4e.css.map": "/static/css/main.96091b4e.css.map",
+    "main.971c9d38.js.map": "/static/js/main.971c9d38.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96091b4e.css",
+    "static/js/main.971c9d38.js"
+  ]
+}
