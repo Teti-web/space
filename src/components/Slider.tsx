@@ -20,42 +20,6 @@ const Slider = ({
   visibleSlider,
   handleSlideVisibility,
 }: sliderProps) => {
-  const [userActive, setUserActive] = useState(false);
-  const advanceToNextSlide = () => {
-    const currentSlideIndex = sliders.findIndex(
-      (slider) => slider.id === visibleSlider,
-    );
-    const nextSlideIndex = (currentSlideIndex + 1) % sliders.length;
-
-    handleSlideVisibility(sliders[nextSlideIndex].id);
-  };
-
-  // Listen for user interaction and reset the auto-advance timer
-  const handleUserInteraction = () => {
-    setUserActive(true);
-    clearTimeout(autoAdvanceTimer);
-    startAutoAdvanceTimer();
-  };
-
-  // Start the auto-advance timer
-  const startAutoAdvanceTimer = () => {
-    const autoAdvanceTimer = setTimeout(() => {
-      advanceToNextSlide();
-      setUserActive(false);
-    }, 10000);
-  };
-
-  let autoAdvanceTimer: NodeJS.Timeout;
-  startAutoAdvanceTimer();
-
-  useEffect(() => {
-    window.addEventListener("mousemove", handleUserInteraction);
-    window.addEventListener("touchstart", handleUserInteraction);
-    return () => {
-      window.removeEventListener("mousemove", handleUserInteraction);
-      window.removeEventListener("touchstart", handleUserInteraction);
-    };
-  }, []);
   return (
     <>
       {navigationNumber ? (
@@ -67,25 +31,25 @@ const Slider = ({
               }`}
               key={slider.id}
             >
-              <div className="animate-fadeIn order-last pt-[100px] text-center lg:order-none lg:text-left">
+              <div className="order-last animate-fadeIn pt-[100px] text-center lg:order-none lg:text-left">
                 <span className="font-primary text-[14px] font-normal tracking-[2.362px] text-blue md:text-[16px] md:tracking-[2.7px]">
                   {slider.subtitle}
                 </span>
                 <h2 className="pt-[9px] font-secondary text-[24px] font-normal uppercase text-white md:text-[40px] lg:text-[56px]">
                   {slider.title}
                 </h2>
-                <p className="leading-25 md:leading-28 lg:leading-32 font-primary text-[15px] font-normal text-blue md:text-[16px] lg:max-w-[444px] lg:text-[18px]">
+                <p className="font-primary text-[15px] font-normal leading-25 text-blue md:text-[16px] md:leading-28 lg:max-w-[444px] lg:text-[18px] lg:leading-32">
                   {slider.descriptions}
                 </p>
               </div>
               <picture>
                 <source
-                  className="animate-fadeInRight h-full max-h-[170px] w-full pt-[32px] md:max-h-[310px] md:pt-[60px] lg:max-h-[527px] lg:pt-0"
+                  className="h-full max-h-[170px] w-full animate-fadeInRight pt-[32px] md:max-h-[310px] md:pt-[60px] lg:max-h-[527px] lg:pt-0"
                   media="(min-width: 976px)"
                   srcSet={slider.imgDesktop}
                 />
                 <img
-                  className="animate-fadeInRight h-full max-h-[170px] w-[100vw] pt-[32px] md:max-h-[310px] md:pt-[60px] lg:max-h-[527px] lg:w-full lg:pt-0 "
+                  className="h-full max-h-[170px] w-[100vw] animate-fadeInRight pt-[32px] md:max-h-[310px] md:pt-[60px] lg:max-h-[527px] lg:w-full lg:pt-0 "
                   src={slider.img}
                   alt={slider.title}
                 />
@@ -94,8 +58,8 @@ const Slider = ({
           ))}
 
           <div
-            className="translate-x-center lg:translate-y-center absolute left-1/2 top-[200px] z-10 flex  items-center justify-center gap-2 md:top-[329px]  md:gap-4 lg:left-[167.23px]
-        lg:top-1/2 lg:flex-col"
+            className="absolute left-1/2 top-[200px] z-10 flex translate-x-center items-center  justify-center gap-2 md:top-[329px] md:gap-4  lg:left-[167.23px] lg:top-1/2
+        lg:translate-y-center lg:flex-col"
           >
             {sliders.map((slider) => (
               <button
@@ -121,26 +85,26 @@ const Slider = ({
               }`}
               key={slider.id}
             >
-              <div className="animate-fadeIn md:mx-[88px]lg:mx-0 border-t-solid border-t-grey order-last mx-[24px] border-t-[1px] pt-[75px] md:order-none md:border-t-0 md:pt-[60px] lg:pt-0">
-                <span className="opacity-50 block text-center font-secondary text-[16px] font-normal uppercase text-white md:text-[24px] lg:text-left lg:text-[32px] ">
+              <div className="md:mx-[88px]lg:mx-0 border-t-solid order-last mx-[24px] animate-fadeIn border-t-[1px] border-t-grey pt-[75px] md:order-none md:border-t-0 md:pt-[60px] lg:pt-0">
+                <span className="block text-center font-secondary text-[16px] font-normal uppercase text-white opacity-50 md:text-[24px] lg:text-left lg:text-[32px] ">
                   {slider.subtitle}
                 </span>
                 <h2 className="pt-[8px] text-center font-secondary font-normal uppercase text-white md:text-[40px] lg:pt-[10px] lg:text-left lg:text-[56px]">
                   {slider.title}
                 </h2>
-                <p className="leading-25 md:leading-28 lg:leading-32 pt-[16px] text-center font-primary text-[15px] font-normal text-blue md:text-[16px] lg:max-w-[444px] lg:pt-[27px] lg:text-left lg:text-[18px]">
+                <p className="pt-[16px] text-center font-primary text-[15px] font-normal leading-25 text-blue md:text-[16px] md:leading-28 lg:max-w-[444px] lg:pt-[27px] lg:text-left lg:text-[18px] lg:leading-32">
                   {slider.descriptions}
                 </p>
               </div>
               <img
-                className="animate-fadeInRight h-full max-h-[250px] w-auto object-fill pt-[32px] md:max-h-[532px] md:pt-[90px] lg:max-h-[630px] lg:pt-0"
+                className="h-full max-h-[250px] w-auto animate-fadeInRight object-fill pt-[32px] md:max-h-[532px] md:pt-[90px] lg:max-h-[630px] lg:pt-0"
                 src={slider.img}
                 alt={slider.title}
               />
             </div>
           ))}
           <div
-            className="translate-x-center absolute left-1/2 top-[395px] z-10 flex items-center justify-center md:top-[425px] lg:bottom-[94px] lg:left-[167.23px]
+            className="absolute left-1/2 top-[395px] z-10 flex translate-x-center items-center justify-center md:top-[425px] lg:bottom-[94px] lg:left-[167.23px]
         lg:top-[auto] lg:translate-x-0"
           >
             {sliders.map((slider) => (
