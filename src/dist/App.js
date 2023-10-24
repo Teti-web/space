@@ -11,7 +11,7 @@ function App() {
     return (react_1["default"].createElement(react_1["default"].Fragment, null,
         react_1["default"].createElement(Navigation_1["default"], null),
         react_1["default"].createElement(react_router_dom_1.Routes, null,
-            react_1["default"].createElement(react_router_dom_1.Route, { path: "/", element: react_1["default"].createElement(HomePage_1["default"], null) }),
+            react_1["default"].createElement(react_router_dom_1.Route, { path: "/space", element: react_1["default"].createElement(HomePage_1["default"], null) }),
             react_1["default"].createElement(react_router_dom_1.Route, { path: "/destination", element: react_1["default"].createElement(DestinationPage_1["default"], null) }),
             react_1["default"].createElement(react_router_dom_1.Route, { path: "/crew", element: react_1["default"].createElement(CrewPage_1["default"], null) }),
             react_1["default"].createElement(react_router_dom_1.Route, { path: "/technology", element: react_1["default"].createElement(TechnologyPage_1["default"], null) }))));
