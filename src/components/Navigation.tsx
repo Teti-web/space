@@ -5,7 +5,7 @@ const Navigation = () => {
   const links = [
     {
       key: "00",
-      adress: "/",
+      adress: "/space",
       name: "HOME",
     },
     {
@@ -47,7 +47,7 @@ const Navigation = () => {
       </svg>
       <button
         type="button"
-        className={` text-gray-500 hover:bg-gray-100 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 mt-[24px] inline-flex h-10 w-10 items-center justify-center rounded-md p-2 text-sm focus:outline-none focus:ring-2 md:hidden ${
+        className={` mt-[24px] inline-flex h-10 w-10 items-center justify-center rounded-md p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden ${
           navbar && "hidden"
         }`}
         onClick={() => setNavbar(!navbar)}
@@ -105,7 +105,7 @@ const Navigation = () => {
           {links.map((link) => (
             <li
               key={link.key}
-              className="hover:after:bg-opacity-50 relative font-secondary tracking-[2.7px] text-white transition-all delay-75 ease-in-out hover:after:absolute hover:after:left-0 hover:after:top-[55px] hover:after:h-[3px] hover:after:w-full hover:after:bg-white"
+              className="relative font-secondary tracking-[2.7px] text-white transition-all delay-75 ease-in-out hover:after:absolute hover:after:left-0 hover:after:top-[55px] hover:after:h-[3px] hover:after:w-full hover:after:bg-white hover:after:bg-opacity-50"
             >
               <span className="pr-[11px] font-bold">{link.key}</span>
               <NavLink

@@ -2,6 +2,7 @@
   "name": "space-tourism",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://teti-web.github.io/space/",
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
